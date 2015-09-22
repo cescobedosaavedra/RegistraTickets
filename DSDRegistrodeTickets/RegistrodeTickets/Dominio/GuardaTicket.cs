@@ -14,7 +14,7 @@ namespace RegistrodeTickets.Dominio
         [DataMember]
         public int N_ticket { get; set; }
         [DataMember]
-        public DateTime F_creación { get; set; }
+        public DateTime F_creacion { get; set; }
         [DataMember]
         public string Estado { get; set; }
         [DataMember]
@@ -22,7 +22,7 @@ namespace RegistrodeTickets.Dominio
         [DataMember]
         public string NombreEmpleado { get; set; }
         [DataMember]
-        public string ApellidosEmpleado { get; set; }
+        public string ApellidoEmpleado { get; set; }
         [DataMember]
         public string CorreoEmpleado { get; set; }
         [DataMember]

@@ -12,13 +12,13 @@ namespace RegistrodeTickets
     public interface IGuardaTickets
     {
         [OperationContract]
-        GuardaTicket InsertarTicket(string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado);
+     GuardaTicket InsertarTicket(int N_Ticket, DateTime F_creacion, string Estado, int CodEmpleado, string NombreEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string AsuntoTicket, string ObservacionTicket);
         [OperationContract]
-        GuardaTicket ObtenerTicket(int CodEmpleado);
+        GuardaTicket ObtenerTicket(int Id);
         [OperationContract]
-        GuardaTicket ModificarTicket(int CodEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado);
+        GuardaTicket ModificarTicket(int Id, int N_Ticket, DateTime F_creacion, string Estado, int CodEmpleado, string NombreEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string AsuntoTicket, string ObservacionTicket);
         [OperationContract]
-        GuardaTicket EliminarTicket(int CodEmpleado);
+        GuardaTicket EliminarTicket(int Id);
         [OperationContract]
         List<GuardaTicket> ListarTicket();
     }
