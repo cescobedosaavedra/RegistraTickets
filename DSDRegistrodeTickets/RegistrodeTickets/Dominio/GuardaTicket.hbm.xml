@@ -8,10 +8,10 @@
       <generator class="increment" />
     </id>
     <property name="CodEmpleado" column="codEmpleado" />
-    <property name="Id" column="id" />
     <property name="N_ticket" column="n_ticket" />
     <property name="F_creacion" column="f_creacion" />
     <property name="Estado" column="estado" />
+    <property name="Prioridad" column="prioridad" />
     <property name="NombreEmpleado" column="NombreEmpleado" />
     <property name="ApellidoEmpleado" column="ApellidoEmpleado" />
     <property name="CorreoEmpleado" column="CorreoEmpleado" />
@@ -20,7 +20,7 @@
     <property name="AreaEmpleado" column="AreaEmpleado" />
     <property name="AsuntoTicket" column="asuntoTicket" />
     <property name="ObservacionTicket" column="observacionTicket" />
-    <property name="Obs_atencion" column="obs_atencion" />
+  
         
   </class>
 </hibernate-mapping>

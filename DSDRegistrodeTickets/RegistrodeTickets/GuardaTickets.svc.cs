@@ -26,18 +26,17 @@ public class GuardaTickets : IGuardaTickets
             }
         }
 
-        public GuardaTicket InsertarTicket(int N_Ticket, DateTime F_creacion, string Estado, int CodEmpleado, string NombreEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string AsuntoTicket, string ObservacionTicket)
-        {
-            throw new NotImplementedException();
-        }
 
-        public GuardaTicket InsertarTicket(int n_Ticket, DateTime f_creacion, string estado, int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string asuntoTicket, string observacionTicket, string obs_atencion)
+
+        public GuardaTicket InsertarTicket(int n_Ticket, DateTime f_creacion, string estado, string prioridad, int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string asuntoTicket, string observacionTicket)
         {
             GuardaTicket empleadoACrear = new GuardaTicket()
             {
+                
                 N_ticket = n_Ticket,
                 F_creacion = f_creacion,
                 Estado = estado,
+                Prioridad = prioridad,
                 CodEmpleado = codEmpleado,
                 NombreEmpleado = nombreEmpleado,
                 ApellidoEmpleado = apellidoEmpleado,
@@ -46,8 +45,8 @@ public class GuardaTickets : IGuardaTickets
                 TelefonoEmpleado = telefonoEmpleado,
                 AreaEmpleado = areaEmpleado,
                 AsuntoTicket = asuntoTicket,
-                ObservacionTicket = observacionTicket,
-                Obs_atencion = obs_atencion
+                ObservacionTicket = observacionTicket
+                //Obs_atencion = obs_atencion
 
             };
             return GuardaTicketDAO.Crear(empleadoACrear);
@@ -65,12 +64,8 @@ public class GuardaTickets : IGuardaTickets
             return GuardaTicketDAO.ListarTodos().ToList();
         }
 
-        public GuardaTicket ModificarTicket(int Id, int N_Ticket, DateTime F_creacion, string Estado, int CodEmpleado, string NombreEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string AsuntoTicket, string ObservacionTicket)
-        {
-            throw new NotImplementedException();
-        }
-
-        public GuardaTicket ModificarTicket(int id, int n_Ticket, DateTime f_creacion, string estado, int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string asuntoTicket, string observacionTicket, string obs_atencion)
+  
+        public GuardaTicket ModificarTicket(int id, int n_Ticket, DateTime f_creacion, string estado, string prioridad, int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string asuntoTicket, string observacionTicket)
         {
             GuardaTicket empleadoAModificar = new GuardaTicket()
             {
@@ -78,6 +73,7 @@ public class GuardaTickets : IGuardaTickets
                 N_ticket = n_Ticket,
                 F_creacion = f_creacion,
                 Estado = estado,
+                Prioridad = prioridad,
                 CodEmpleado = codEmpleado,
                 NombreEmpleado = nombreEmpleado,
                 ApellidoEmpleado = apellidoEmpleado,
@@ -86,8 +82,8 @@ public class GuardaTickets : IGuardaTickets
                 TelefonoEmpleado = telefonoEmpleado,
                 AreaEmpleado = areaEmpleado,
                 AsuntoTicket = asuntoTicket,
-                ObservacionTicket = observacionTicket,
-                Obs_atencion = obs_atencion
+                ObservacionTicket = observacionTicket
+                //Obs_atencion = obs_atencion
             };
             return GuardaTicketDAO.Modificar(empleadoAModificar);
 

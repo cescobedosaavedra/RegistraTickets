@@ -14,9 +14,11 @@ namespace RegistrodeTickets.Dominio
         [DataMember]
         public int N_ticket { get; set; }
         [DataMember]
-        public DateTime F_creacion { get; set; }
+        public string F_creacion { get; set; }
         [DataMember]
         public string Estado { get; set; }
+        [DataMember]
+        public string Prioridad { get; set; }
         [DataMember]
         public int CodEmpleado { get; set; }
         [DataMember]
